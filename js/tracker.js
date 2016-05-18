@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function checkLimits(stat, v) {
         
         var operators = {
-            '+': function (stat, val) { return 255 - (counter[stat] + val); }, // check positive inputs
+            '+': function (stat, val) { return 252 - (counter[stat] + val); }, // check positive inputs
             '-': function (stat, val) { return counter[stat] - val; } // check negative inputs
         },
             val = +v.slice(1, v.length), // remove non-number character from button input
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateGraph(stat) {
         
         var id = stat + '-bar',
-            height = (counter[stat] / 255) * 95 + 5 + "px";
+            height = (counter[stat] / 252) * 95 + 5 + "px";
         
         changeHeight(id, height);
         
