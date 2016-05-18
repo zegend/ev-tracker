@@ -1,0 +1,433 @@
+/* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - http://cssreset.com */
+
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+input,textarea,select{*font-size:100%}
+legend{color:#000}
+
+/* General styles */
+
+html {
+    background-color: #f7f7f7;
+    color: #555;    
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #777;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper.small { max-width: 800px; }
+
+.row { padding: 0 20px; }
+.row:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.title {
+    border-bottom: 5px solid #777;
+    text-align: center;
+    margin: -40px 0 40px 0;
+}
+.title h2 {
+    display: inline-block;
+    font-size: 24px;
+    position: relative;
+    top: 27px;
+    background-color: #f7f7f7;
+    padding: 10px 20px;
+    color: #777;
+    font-weight: bold;
+}
+
+.button {  
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Navigation bar */
+
+.navigation {
+    background-color: #fff;
+    height: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navigation a {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.logo .image {
+    font-size: 32px;
+    line-height: 100px;
+    height: 100%;
+    padding-left: 45px;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    color: #777;
+}
+
+/* EV tracker styles */
+
+#tool {
+    padding: 40px 0;
+    background-color: #f7f7f7;
+}
+
+#tracker {
+    float: right;
+    width: 66.7%;
+}
+#tracker-buttons { margin: 0 0 20px 60px; }
+
+#tracker-buttons:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#tracker-buttons .button {
+    float: right;
+    display: inline-block;
+    height: 48px;
+    padding: 0 20px;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    
+    color: #fff;
+    font-size: 20px;
+    line-height: 48px;
+    
+    cursor: pointer;
+    transition: .1s background-color ease;
+}
+
+#tracker-buttons .button#mode { float: left; background-color: #69af69; }
+#tracker-buttons .button#mode:hover { background-color: #569056; }
+
+#tracker-buttons .button#undo { margin-right: 20px; background-color: #5c9fbc; }
+#tracker-buttons .button#reset:hover { background-color: #ac6666; }
+
+#tracker-buttons .button#reset { background-color: #d27b7b; }
+#tracker-buttons .button#undo:hover { background-color: #4b839b; }
+
+
+.stat {
+    height: 50px;
+    margin: 0 0 12px 60px;
+    background-color: #eee;
+}
+.stat:last-child { margin-bottom: 0; }
+
+.stat:after {
+    content:'';
+    display: block;
+    clear: both;
+}
+
+.stat > div, .stat > input {
+    display: block;
+    float: left;
+    height: 50px;
+    
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.stat .name {
+    width: 170px;
+    text-align: center;
+    color: #777;
+}
+
+.stat input {
+    width: 70px;
+    padding: 0 10px;
+    border: 0;
+    
+    background: #ffffff;
+    text-align: center;
+    color: #999;
+}
+
+.stat .button {
+    margin-left: 20px;
+    width: 60px;
+    text-align: center;
+    
+    background-color: #777;
+    color: #fff;
+    
+    transition: .1s background-color ease;
+    cursor: pointer;
+}
+.stat .button.remove-10 { float: right; background-color: #aaa; }
+.stat .button:hover { background-color: #555; }
+
+
+#panel {
+    width: 33.3%;
+    float: left;
+}
+
+
+.visual { 
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.visual .counter {
+    height: 48px;
+    
+    font-size: 20px;
+    line-height: 48px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #777777;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+.visual .graph-wrapper:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.visual .bar-wrapper { 
+    float: left;
+    width: 16.66%;
+    height: 150px;
+    position: relative;
+}
+
+.visual .bar-wrapper .bar {
+    width: 50%;
+    min-height: 5px;
+    position: absolute;
+    bottom: 30px;
+    left: 25%;
+    
+    background-color: #5c9fbc;
+}
+
+.visual .bar-wrapper .legend {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.multiplier-toggle { margin-bottom: 11px; }
+
+.multiplier-toggle:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.multiplier-toggle .name {
+    float: left;
+    width: calc(100% - 100px);
+    height: 23px;
+    line-height: 23px;
+    color: #aaa;
+    font-size: 20px;
+}
+.multiplier-toggle.on .name { color: #666; }
+
+.multiplier-toggle .switch {
+    float: right;
+    width: 98px;
+    height: 25px;
+    background-color: #d27b7b;
+    cursor: pointer;
+}
+.multiplier-toggle.on .switch {
+    text-align: right;
+    background-color: #69af69;
+}
+.multiplier-toggle .switch div {
+    display: inline-block;
+    height: 23px;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-top: 0;
+    border-left: 0;
+    background-color: #fff;
+    width: 40px;
+}
+
+
+/* Suggestions area */
+
+#suggestions {
+    background-color: #eee;
+    padding: 60px 0 40px 0;
+}
+
+#suggestions .title h2 { background-color: #eee; }
+
+#suggestions .training-areas, #suggestions .helpful-links {
+    width: calc(50% - 20px);
+    float: left;
+    text-align: center;
+}
+#suggestions .training-areas img, #suggestions .helpful-links img {
+    height: 98px;
+    width: 98px;
+    margin-bottom: 13px;
+}
+#suggestions .training-areas { margin-right: 40px; }
+
+
+#suggestions .helpful-links a { 
+    display: inline-block;
+    margin-bottom: 14px; 
+}
+#suggestions .helpful-links a:hover { 
+    text-decoration: underline;
+    color: #555;
+}
+
+.area {
+    padding: 7px 0;
+    color: #777;
+}
+.area span {
+    font-weight: bold;
+    color: #555;
+}
+
+/* media queries */
+
+
+@media only screen and (max-width: 1100px) {
+    #tracker .stat .name { width: 100px; }
+    #tracker .stat .name span { display: none; }
+    #tracker .stat input { width: 50px; }
+}
+
+@media only screen and (max-width: 1000px) {
+    #tracker #tracker-buttons .button { font-size: 16px; padding: 0 15px; }
+}
+
+@media only screen and (max-width: 900px) {
+    .navigation { height: 70px; }
+    .navigation .logo { width: 75%; }
+    .navigation .logo .image {font-size: 24px; line-height: 70px;}
+    
+    #tracker { width: 100%; float: none; margin-bottom: 20px; }
+    #tracker #tracker-buttons { margin-left: 0; }
+    #tracker #tracker-buttons .button { font-size: 20px; padding: 0 20px; }
+    #tracker .stat { margin-left: 0; }
+    #tracker .stat .name { width: 170px; }
+    #tracker .stat .name span { display: inline; }
+    #tracker .stat input { width: 70px; }
+    
+    .navigation a img { height: 100px; }
+    
+    #panel { width: 100%; float: none; }
+    .visual .graph-wrapper {display: none;}
+    .visual #ev-total {margin: 30px 0;}
+    .visual { margin-bottom: 0; }
+    
+    #suggestions {
+        padding-bottom: 10px;
+    }
+    .suggested-areas .col-4 {
+        float: none;
+        width: 100%;
+        margin: 0 0 40px 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    
+    #tool { padding: 20px 0; }
+    .navigation a img { height: 90px; }
+    #tracker #tracker-buttons .button { font-size: 16px; padding: 0 15px; }
+    #tracker .stat .name { width: 100px; }
+    #tracker .stat .name span { display: none; }
+    #tracker .stat input { width: 50px; }
+    
+    #suggestions .training-areas, #suggestions .helpful-links {
+        float: none;
+        width: 100%;
+        margin: 0 0 40px 0;
+    }
+    
+}
+
+@media only screen and (max-width: 560px) {
+    
+    #tracker .stat .name { width: 70px; font-size: 16px; }
+    #tracker .stat input { width: 40px; }
+    #tracker .stat .button { font-size: 16px; margin-left: 10px; }
+    #tracker #tracker-buttons .button#undo { margin-right: 10px; }
+    
+}
+@media only screen and (max-width: 480px) {
+    
+    #tracker .stat { line-height: 40px; height: 40px;}
+    #tracker .stat .name { line-height: 40px; height: 40px;}
+    #tracker .stat input { width: 30px; font-size: 16px; line-height: 40px; height: 40px;}
+    #tracker .stat .button { 
+        margin: 0 0 0 10px; 
+        font-size: 16px; 
+        line-height: 40px;
+        height: 40px;
+        width: 50px;
+    }
+    #tracker #tracker-buttons .button#mode { 
+        display: block; 
+        width: calc(100% - 30px); 
+        text-align: center; 
+        float: none; 
+    }
+    #tracker #tracker-buttons .button#undo, #tracker #tracker-buttons .button#reset { 
+        margin-top: 20px; 
+        width: calc(50% - 40px);
+        text-align: center;
+    }
+    #tracker #tracker-buttons .button#undo { margin-right: 20px; }
+    
+}
+@media only screen and (max-width: 420px) {
+    
+    #tracker .stat .button.remove-10 { display: none; }
+    #tracker .stat .button { margin-left: 5px; }
+    #tracker .stat .button.add-1 { margin-left: calc(100% - 282px); }
+    
+}
+@media only screen and (max-width: 350px) {
+    .navigation .logo .image { font-size: 18px; }
+}
+@media only screen and (max-width: 320px) {
+    html { overflow-x: auto; }
+}
